@@ -1,11 +1,11 @@
 // M1
 const asyncHandler = (requestHandeler)=>{
-    (req,res,next)=>{
+ return   (req,res,next)=>{
         Promise.resolve(requestHandeler(req,res,next)).catch((err)=> next(err));
     }
 }
 
-export {asyncHandler} 
+export { asyncHandler } 
 
 
 
